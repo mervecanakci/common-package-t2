@@ -16,4 +16,3 @@ public class MaintenanceIsCompletedEvent implements Event {
     private UUID carId;
 
 }
-//todo silsen mi
