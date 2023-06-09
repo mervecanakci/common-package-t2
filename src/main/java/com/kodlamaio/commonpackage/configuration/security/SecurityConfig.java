@@ -19,7 +19,8 @@ public class SecurityConfig {
         http.cors().and().authorizeHttpRequests()// http isteklerini authorize edicek
                 //kayıt olayan kullanılar da erişsin; /api/cars/check-car-available: car clients den geldi
                 //yıldızlar da devamında ne gelirse kabul anlamında
-                .requestMatchers("/api/filters", "/api/cars/check-car-available/**", "/api/payments/check")
+                //"/actuator/**" erişmek istiyoruz
+                .requestMatchers("/api/filters", "/api/cars/check-car-available/**", "/api/payments/check", "/actuator/**")
                 //hepsine izin ver
                 .permitAll()
                 .requestMatchers("/api/**")
